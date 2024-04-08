@@ -53,7 +53,7 @@ $ flask run
 Para orientações sobre como configurar um ambiente de desenvolvimento e como
 contribuir para o Flask, veja o [guia de contribuição][].
 
-[guia de contribuição]: https://github.com/pallets/flask/blob/main/CONTRIBUTING.rst
+[guia de contribuição]: https://github.com/louipasquini/flask/blob/docs-ptbr/CONTRIBUTING.rst
 
 
 ## Doação
