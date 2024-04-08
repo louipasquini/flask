@@ -50,17 +50,16 @@ $ flask run
 
 ## Contribuindo
 
-For guidance on setting up a development environment and how to make a
-contribution to Flask, veja o [guia de contribuição][].
+Para orientações sobre como configurar um ambiente de desenvolvimento e como
+contribuir para o Flask, veja o [guia de contribuição][].
 
 [guia de contribuição]: https://github.com/pallets/flask/blob/main/CONTRIBUTING.rst
 
 
 ## Doação
 
-The Pallets organization develops and supports Flask and the libraries
-it uses. In order to grow the community of contributors and users, and
-allow the maintainers to devote more time to the projects, [please
-donate today][].
+A organização Pallets desenvolve e dá suporte ao Flask e as bibliotecas que
+ele utiliza. Para a comunidade de colaboradores e usuários crescer, e
+permitir que os mantenedores dediquem mais tempo aos projetos, [por favor, doe hoje][].
 
-[please donate today]: https://palletsprojects.com/donate
+[por favor, doe hoje]: https://palletsprojects.com/donate
