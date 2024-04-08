@@ -1,24 +1,25 @@
 # Flask
 
-Flask is a lightweight [WSGI][] web application framework. It is designed
-to make getting started quick and easy, with the ability to scale up to
-complex applications. It began as a simple wrapper around [Werkzeug][]
-and [Jinja][], and has become one of the most popular Python web
-application frameworks.
+Flask é um framework de baixo nível [WSGI][] para aplicações web. Ele foi
+desenhado para ter uma iniciação rápida e fácil, com a habilidade de escalar
+para aplicações complexas. Começou como um wrapper simples entre [Werkzeug][]
+e [Jinja][], e se tornou um dos mais populares frameworks para desenvolvimento
+web em Python.
 
-Flask offers suggestions, but doesn't enforce any dependencies or
-project layout. It is up to the developer to choose the tools and
-libraries they want to use. There are many extensions provided by the
-community that make adding new functionality easy.
+Flask oferece sugestões, mas não impõe qualquer dependência ou
+layout de projeto. Está na mão dos desenvolvedores a escolha de quais
+ferramentas e bibliotecas querem utilizar. Existem diversas extensões
+disponibilizadas pela comunidade que facilita a adição de novas
+funcinoalidades.
 
 [WSGI]: https://wsgi.readthedocs.io/
 [Werkzeug]: https://werkzeug.palletsprojects.com/
 [Jinja]: https://jinja.palletsprojects.com/
 
 
-## Installing
+## Instalando
 
-Install and update from [PyPI][] using an installer such as [pip][]:
+Instale e atualize pelo [PyPI][] utilizando um instalador como o [pip][]:
 
 ```
 $ pip install -U Flask
@@ -28,17 +29,17 @@ $ pip install -U Flask
 [pip]: https://pip.pypa.io/en/stable/getting-started/
 
 
-## A Simple Example
+## Exemplo simples
 
 ```python
-# save this as app.py
+# Salve isso como app.py
 from flask import Flask
 
 app = Flask(__name__)
 
 @app.route("/")
-def hello():
-    return "Hello, World!"
+def ola_mundo():
+    return "Olá, Mundo!"
 ```
 
 ```
@@ -47,15 +48,15 @@ $ flask run
 ```
 
 
-## Contributing
+## Contribuindo
 
 For guidance on setting up a development environment and how to make a
-contribution to Flask, see the [contributing guidelines][].
+contribution to Flask, veja o [guia de contribuição][].
 
-[contributing guidelines]: https://github.com/pallets/flask/blob/main/CONTRIBUTING.rst
+[guia de contribuição]: https://github.com/pallets/flask/blob/main/CONTRIBUTING.rst
 
 
-## Donate
+## Doação
 
 The Pallets organization develops and supports Flask and the libraries
 it uses. In order to grow the community of contributors and users, and
