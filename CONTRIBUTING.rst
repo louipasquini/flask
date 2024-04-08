@@ -1,47 +1,46 @@
-How to contribute to Flask
+Como contribuir como o Flask
 ==========================
 
-Thank you for considering contributing to Flask!
+Obrigado por já considerar contribuir com o Flask!
 
 
-Support questions
+Questões de suporte
 -----------------
 
-Please don't use the issue tracker for this. The issue tracker is a tool
-to address bugs and feature requests in Flask itself. Use one of the
-following resources for questions about using Flask or issues with your
-own code:
+Por favor não use a aba "issues" para isso. A aba "issues" é uma ferramenta
+para reportar bugs e solicitações de features para o próprio Flask. Utilize um
+dos seguintes recursos para questionar sobre o uso do Flask ou problemas com
+seu próprio código:
 
--   The ``#questions`` channel on our Discord chat:
+-   O nosso canal ``#questions`` em nosso chat do Discord:
     https://discord.gg/pallets
--   Ask on `Stack Overflow`_. Search with Google first using:
-    ``site:stackoverflow.com flask {search term, exception message, etc.}``
--   Ask on our `GitHub Discussions`_ for long term discussion or larger
-    questions.
+-   Pergunte no `Stack Overflow`_. Pesquise no Google com:
+    ``site:stackoverflow.com flask {termo de pesquisa, mensagem de exception, etc.}``
+-   Pergunte no nosso `GitHub Discussions`_ para discussões ou perguntas longas.
 
 .. _Stack Overflow: https://stackoverflow.com/questions/tagged/flask?tab=Frequent
 .. _GitHub Discussions: https://github.com/pallets/flask/discussions
 
 
-Reporting issues
+Reportando issues
 ----------------
 
-Include the following information in your post:
+Inclua as seguintes informações na sua postagem:
 
--   Describe what you expected to happen.
--   If possible, include a `minimal reproducible example`_ to help us
-    identify the issue. This also helps check that the issue is not with
-    your own code.
--   Describe what actually happened. Include the full traceback if there
-    was an exception.
--   List your Python and Flask versions. If possible, check if this
-    issue is already fixed in the latest releases or the latest code in
-    the repository.
+-   Descreva o que esperava que acontecesse.
+-   Se possível, inclua um `exemplo de código curto`_ para nos ajudar
+    a identificar o problema. Isso também nos ajuda a avaliar se o problema
+    não está no seu próprio código.
+-   Descreva qual foi o resultado obtido. Inclua todo o traceback caso tenha
+    uma exception.
+-   Liste suas versões do Python e do Flask. Se possível, cheque se o
+    problema já foi resolvido com versões mais recentes ou o último código
+    no nosso repositório.
 
-.. _minimal reproducible example: https://stackoverflow.com/help/minimal-reproducible-example
+.. _exemplo de código curto: https://stackoverflow.com/help/minimal-reproducible-example
 
 
-Submitting patches
+Enviando patches
 ------------------
 
 If there is not an open issue for what you want to submit, prefer
