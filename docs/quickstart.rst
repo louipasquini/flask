@@ -148,8 +148,8 @@ browser do usuário.
 view. Essas regras de variáveis são explicadas a seguir.
 
 
-Routeando
----------
+Roteando
+--------
 
 As aplicações web modernas utilizam URLs com significados para auxiliar os usuários. 
 Os usuários tendem a preferir paginas e voltar a acessá-las se tiverem URLs
@@ -193,19 +193,19 @@ especificar o tipo do argumento, como exemplo ``<converter:variable_name>``. ::
         # show the subpath after /path/
         return f'Subpath {escape(subpath)}'
 
-Converter types:
+Tipos do conversor:
 
-========== ==========================================
-``string`` (default) accepts any text without a slash
-``int``    accepts positive integers
-``float``  accepts positive floating point values
-``path``   like ``string`` but also accepts slashes
-``uuid``   accepts UUID strings
-========== ==========================================
+========== ========================================
+``string`` (padrão) aceita qualquer texto sem barra
+``int``    aceita núnmeros inteiros positivos
+``float``  aceita decimais positivos
+``path``   igual a ``string`` mas aceitando barras
+``uuid``   aceita strings UUID
+========== ========================================
 
 
-Unique URLs / Redirection Behavior
-``````````````````````````````````
+URLs unicas / Comportamento de redirecionamento
+```````````````````````````````````````````````
 
 The following two rules differ in their use of a trailing slash. ::
 
