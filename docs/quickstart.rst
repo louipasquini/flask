@@ -288,10 +288,10 @@ quando usamos um Python shell. Veja :ref:`context-locals`.
 Métodos HTTP
 ````````````
 
-Web applications use different HTTP methods when accessing URLs. You should
-familiarize yourself with the HTTP methods as you work with Flask. By default,
-a route only answers to ``GET`` requests. You can use the ``methods`` argument
-of the :meth:`~flask.Flask.route` decorator to handle different HTTP methods.
+Aplicações web usam diferentes métodos HTTP quando acessam URLs. Você deve
+estar familiarizado com os métodos HTTP enquanto trabalha com Flask. Por padrão,
+uma rota só responde requisições ``GET``. Você pode usar argumento ``methods`` 
+no decorador :meth:`~flask.Flask.route` para lidar com diferentes métodos HTTP.
 ::
 
     from flask import request
@@ -303,13 +303,12 @@ of the :meth:`~flask.Flask.route` decorator to handle different HTTP methods.
         else:
             return show_the_login_form()
 
-The example above keeps all methods for the route within one function,
-which can be useful if each part uses some common data.
+O exemplo acima mantém todos os métodos pela rota por uma função, o que pode ser
+útil se cada parte utilizar dados em comum.
 
-You can also separate views for different methods into different
-functions. Flask provides a shortcut for decorating such routes with
-:meth:`~flask.Flask.get`, :meth:`~flask.Flask.post`, etc. for each
-common HTTP method.
+Você pode separar views para métodos diferentes em funções diferentes. Flask
+fornece um atalho para os decorators dessas rotas :meth:`~flask.Flask.get`, 
+:meth:`~flask.Flask.post`, etc. para cada método HTTP.
 
 .. code-block:: python
 
@@ -321,9 +320,9 @@ common HTTP method.
     def login_post():
         return do_the_login()
 
-If ``GET`` is present, Flask automatically adds support for the ``HEAD`` method
-and handles ``HEAD`` requests according to the `HTTP RFC`_. Likewise,
-``OPTIONS`` is automatically implemented for you.
+Se um ``GET`` está presente, Flask automaticamente adiciona suporte para o método 
+``HEAD`` e lida com requisições ``HEAD`` de acordo com o `HTTP RFC`_. Igualmente,
+``OPTIONS`` é automaticamente implementado para você.
 
 .. _HTTP RFC: https://www.ietf.org/rfc/rfc2068.txt
 
