@@ -1,14 +1,14 @@
-Quickstart
-==========
+Início rápido
+=============
 
-Eager to get started? This page gives a good introduction to Flask.
-Follow :doc:`installation` to set up a project and install Flask first.
+Ansioso para iníciar? Essa página vai te dar uma boa introdução ao Flask.
+Siga os passos em :doc:`installation` para criar o project e instalar o Flask primeiro.
 
 
-A Minimal Application
----------------------
+Aplicação simples
+-----------------
 
-A minimal Flask application looks something like this:
+Uma aplicação simples em Flask se parece com isso:
 
 .. code-block:: python
 
@@ -20,28 +20,26 @@ A minimal Flask application looks something like this:
     def hello_world():
         return "<p>Hello, World!</p>"
 
-So what did that code do?
+Então o que o código faz?
 
-1.  First we imported the :class:`~flask.Flask` class. An instance of
-    this class will be our WSGI application.
-2.  Next we create an instance of this class. The first argument is the
-    name of the application's module or package. ``__name__`` is a
-    convenient shortcut for this that is appropriate for most cases.
-    This is needed so that Flask knows where to look for resources such
-    as templates and static files.
-3.  We then use the :meth:`~flask.Flask.route` decorator to tell Flask
-    what URL should trigger our function.
-4.  The function returns the message we want to display in the user's
-    browser. The default content type is HTML, so HTML in the string
-    will be rendered by the browser.
+1.  Primeiro nós importamos a classe :class:`~flask.Flask`. Uma instância dessa
+    classe vai ficar sua aplicação WSGI.
+2.  Depois nós criamos uma instância dessa classe. O primeiro argumento é o
+    nome do módulo da aplicação ou pacote. ``__name__`` é um atalho conveniente
+    para isso que é apropriado para a maioria das classes.
+    Isso é necessário para que o Flask saiba onde procurar por recursos como
+    templates e arquivos estáticos.
+3.  Então nós usamos decorator :meth:`~flask.Flask.route` para dizer ao Flask
+    qual URL deve ativar nossa função.
+4.  A função retorna a mensagem que queremos que apareça no browser do usuário.
+    O tipo de conteúdo padrão é um HTML, então o HTML na string vai ser
+    renderizado pelo browser.
 
-Save it as :file:`hello.py` or something similar. Make sure to not call
-your application :file:`flask.py` because this would conflict with Flask
-itself.
+Salve-o como :file:`hello.py` ou algo similar. Não chame sua aplicação
+:file:`flask.py` porque isso irá conflitar com seu próprio Flask.
 
-To run the application, use the ``flask`` command or
-``python -m flask``. You need to tell the Flask where your application
-is with the ``--app`` option.
+Para rodar a aplicação, use o comando ``flask`` ou ``python -m flask``.
+Você precisa dizer aoo Flask aonde sua aplicação está com a opção ``--app``.
 
 .. code-block:: text
 
@@ -49,62 +47,59 @@ is with the ``--app`` option.
      * Serving Flask app 'hello'
      * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
 
-.. admonition:: Application Discovery Behavior
+.. admonition:: Comportamento do descobridor de aplicação
 
-    As a shortcut, if the file is named ``app.py`` or ``wsgi.py``, you
-    don't have to use ``--app``. See :doc:`/cli` for more details.
+    Como um atalho, se o arquivo está nomeado ``app.py`` ou ``wsgi.py``, você
+    não precisa usar o ``--app``. Veja :doc:`/cli` para mais detalhes.
 
-This launches a very simple builtin server, which is good enough for
-testing but probably not what you want to use in production. For
-deployment options see :doc:`deploying/index`.
+Isso lança um simples servidor integrado, que é bom o suficiente para testar,
+mas provavelmente não é o que você quer para usar em produção. Para opções
+de deploy, veja :doc:`deploying/index`.
 
-Now head over to http://127.0.0.1:5000/, and you should see your hello
-world greeting.
+Agora acesse http://127.0.0.1:5000/, e você deverá ver sua aplicação hello world.
 
-If another program is already using port 5000, you'll see
-``OSError: [Errno 98]`` or ``OSError: [WinError 10013]`` when the
-server tries to start. See :ref:`address-already-in-use` for how to
-handle that.
+Se algum outro programa já estiver usando a porta 5000, você vai ver
+``OSError: [Errno 98]`` ou ``OSError: [WinError 10013]`` quando o servidor
+tentar iniciar. Veja em :ref:`address-already-in-use` como lidar com isso.
 
 .. _public-server:
 
-.. admonition:: Externally Visible Server
+.. admonition:: Servidor visível externamente
 
-   If you run the server you will notice that the server is only accessible
-   from your own computer, not from any other in the network.  This is the
-   default because in debugging mode a user of the application can execute
-   arbitrary Python code on your computer.
+   Se você rodar o servidor, irá notar que o servidor só é acessível pelo seu 
+   próprio computador, e não de qualquer outro em sua rede. Isso é o padrão
+   porque em modo de debug um usuário da aplicação pode executar um código
+   Python arbitrário no seu computador.
 
-   If you have the debugger disabled or trust the users on your network,
-   you can make the server publicly available simply by adding
-   ``--host=0.0.0.0`` to the command line::
+   Se você tiver o debugger desabilitado ou confiar nos usuários da sua rede,
+   você pode criar um servidor disponível publicamente simplesmente adicionando
+   ``--host=0.0.0.0`` na linha de comando::
 
        $ flask run --host=0.0.0.0
 
-   This tells your operating system to listen on all public IPs.
+   Isso diz ao seu sistema operante para ouvir todos os IPs públicos.
 
 
-Debug Mode
-----------
+Modo de Debug
+-------------
 
-The ``flask run`` command can do more than just start the development
-server. By enabling debug mode, the server will automatically reload if
-code changes, and will show an interactive debugger in the browser if an
-error occurs during a request.
+O comando ``flask run`` pode fazer mais do que só iniciar o desenvolvimento do
+servidor. Ativando o modo de debug, o servidor vai automaticamente atualizar se 
+o código mudar, e vai mostrar um debugger interativo no browser caso um erro
+ocorra durante a requisição.
 
 .. image:: _static/debugger.png
     :align: center
     :class: screenshot
     :alt: The interactive debugger in action.
 
-.. warning::
+.. Atenção::
 
-    The debugger allows executing arbitrary Python code from the
-    browser. It is protected by a pin, but still represents a major
-    security risk. Do not run the development server or debugger in a
-    production environment.
+    O debugger permite executar um código Python arbitrário pelo browser.
+    Ele é protegido por um pin, mas ainda representa um grande risco de seguraça.
+    Não rode o servidor de desenvolvimento ou debugger em um ambiente de produção.
 
-To enable debug mode, use the ``--debug`` option.
+Para ativar o modo de debug, use a opção ``--debug``.
 
 .. code-block:: text
 
@@ -116,22 +111,22 @@ To enable debug mode, use the ``--debug`` option.
      * Debugger is active!
      * Debugger PIN: nnn-nnn-nnn
 
-See also:
+Veja também:
 
--   :doc:`/server` and :doc:`/cli` for information about running in debug mode.
--   :doc:`/debugging` for information about using the built-in debugger
-    and other debuggers.
--   :doc:`/logging` and :doc:`/errorhandling` to log errors and display
-    nice error pages.
+-   :doc:`/server` e :doc:`/cli` para informações sobre rodar no modo de debug.
+-   :doc:`/debugging` para informações sobre o uso do debugger integrado e
+    outros debuggers.
+-   :doc:`/logging` e :doc:`/errorhandling` para registrar erros e apresentar
+    boas páginas de erros.
 
 
 HTML Escaping
 -------------
 
-When returning HTML (the default response type in Flask), any
-user-provided values rendered in the output must be escaped to protect
-from injection attacks. HTML templates rendered with Jinja, introduced
-later, will do this automatically.
+Quando retornando HTML (o tipo padrão de resposta do Flask), qualquer valor
+fornecido pelo usuário renderizado na saída devem ter escape para proteger de
+ataques de injeção. Modelos HTML renderizados com o Jinja, introduzidos mais
+tarde, farão isso automaticamente.
 
 :func:`~markupsafe.escape`, shown here, can be used manually. It is
 omitted in most examples for brevity, but you should always be aware of
