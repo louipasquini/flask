@@ -207,7 +207,7 @@ Tipos do conversor:
 URLs unicas / Comportamento de redirecionamento
 ```````````````````````````````````````````````
 
-The following two rules differ in their use of a trailing slash. ::
+As duas regras seguintes se diferem na forma de uso das barras. ::
 
     @app.route('/projects/')
     def projects():
