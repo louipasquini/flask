@@ -128,9 +128,9 @@ fornecido pelo usuário renderizado na saída devem ter escape para proteger de
 ataques de injeção. Modelos HTML renderizados com o Jinja, introduzidos mais
 tarde, farão isso automaticamente.
 
-:func:`~markupsafe.escape`, shown here, can be used manually. It is
-omitted in most examples for brevity, but you should always be aware of
-how you're using untrusted data.
+:func:`~markupsafe.escape`, mostrado aqui, pode ser usado manualmente. Para ser
+breve, em maior parte dos elementos foi omitido o uso, mas você deve sempre estar
+ciente de como está utilizando dados não confiáveis.
 
 .. code-block:: python
 
@@ -140,22 +140,22 @@ how you're using untrusted data.
     def hello(name):
         return f"Hello, {escape(name)}!"
 
-If a user managed to submit the name ``<script>alert("bad")</script>``,
-escaping causes it to be rendered as text, rather than running the
-script in the user's browser.
+Se o usuário conseguir enviar o nome ``<script>alert("bad")</script>``, o 
+escape fará que seja renderizado como texto, ao invés de rodar o script no
+browser do usuário.
 
-``<name>`` in the route captures a value from the URL and passes it to
-the view function. These variable rules are explained below.
+``<name>`` na rota captura o valor pela URL e passa para a função que gera a
+view. Essas regras de variáveis são explicadas a seguir.
 
 
-Routing
--------
+Routeando
+---------
 
-Modern web applications use meaningful URLs to help users. Users are more
-likely to like a page and come back if the page uses a meaningful URL they can
-remember and use to directly visit a page.
+As aplicações web modernas utilizam URLs com significados para auxiliar os usuários. 
+Os usuários tendem a preferir paginas e voltar a acessá-las se tiverem URLs
+significativas, em que eles possam lembrar e visitar uma página diretamente.
 
-Use the :meth:`~flask.Flask.route` decorator to bind a function to a URL. ::
+Use o decorador :meth:`~flask.Flask.route` vincular uma função a uma URL. ::
 
     @app.route('/')
     def index():
@@ -165,16 +165,16 @@ Use the :meth:`~flask.Flask.route` decorator to bind a function to a URL. ::
     def hello():
         return 'Hello, World'
 
-You can do more! You can make parts of the URL dynamic and attach multiple
-rules to a function.
+Você pode fazer mais! Você pode fazer partes da URL dinâmica e anexar múltiplas
+regras para uma função.
 
-Variable Rules
-``````````````
+Regras de variáveis
+```````````````````
 
-You can add variable sections to a URL by marking sections with
-``<variable_name>``. Your function then receives the ``<variable_name>``
-as a keyword argument. Optionally, you can use a converter to specify the type
-of the argument like ``<converter:variable_name>``. ::
+Você pode adicionar seções de variáveis para a URL criando essas seções com 
+``<variable_name>``. Sua função ira receber o ``<variable_name>`` como um 
+argumento com tal palavra-chave. Opcionalmente, você pode usar um conversor para
+especificar o tipo do argumento, como exemplo ``<converter:variable_name>``. ::
 
     from markupsafe import escape
 
