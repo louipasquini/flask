@@ -217,45 +217,43 @@ As duas regras seguintes se diferem na forma de uso das barras. ::
     def about():
         return 'The about page'
 
-The canonical URL for the ``projects`` endpoint has a trailing slash.
-It's similar to a folder in a file system. If you access the URL without
-a trailing slash (``/projects``), Flask redirects you to the canonical URL
-with the trailing slash (``/projects/``).
+A URL para o endpoint ``projects`` tem uma barra final. É similar a uma pasta
+em um sistema de arquivos. Se você acessar a URL sem a barra final (``/projects``), 
+o Flask vai redirecionar você para a URL com a barra (``/projects/``).
 
-The canonical URL for the ``about`` endpoint does not have a trailing
-slash. It's similar to the pathname of a file. Accessing the URL with a
-trailing slash (``/about/``) produces a 404 "Not Found" error. This helps
-keep URLs unique for these resources, which helps search engines avoid
-indexing the same page twice.
+Já a URL para o endpoint ``about`` não tem a barra final. É similar aos caminho 
+de um arquivo. Acessando a URL com uma barra final (``/about/``) produzira um
+erro 404 "Not Found". Isso ajuda a manter URLs unicas para esses recursos, que
+ajuda os mecanismos de busca evitarem indexar a mesma página duas vezes.
 
 
 .. _url-building:
 
-URL Building
-````````````
+Produzindo a URL
+````````````````
 
-To build a URL to a specific function, use the :func:`~flask.url_for` function.
-It accepts the name of the function as its first argument and any number of
-keyword arguments, each corresponding to a variable part of the URL rule.
-Unknown variable parts are appended to the URL as query parameters.
+Para produzir uma URL para uma função específica, use a função :func:`~flask.url_for`. 
+Ela aceita o nome da função como primeiro argumento e qualquer quantidade de argumentos, 
+correspondente às partes variáveis das regras de URL. Partes variáveis desconhecidas
+são anexadas a URL como query parameters.
 
-Why would you want to build URLs using the URL reversing function
-:func:`~flask.url_for` instead of hard-coding them into your templates?
+Por que você quereria produzir URLs usando a função URL reversa
+:func:`~flask.url_for` ao invés de codá-los em seus próprios templates?
 
-1. Reversing is often more descriptive than hard-coding the URLs.
-2. You can change your URLs in one go instead of needing to remember to
-   manually change hard-coded URLs.
-3. URL building handles escaping of special characters transparently.
-4. The generated paths are always absolute, avoiding unexpected behavior
-   of relative paths in browsers.
-5. If your application is placed outside the URL root, for example, in
-   ``/myapplication`` instead of ``/``, :func:`~flask.url_for` properly
-   handles that for you.
+1. A reversão é mais descritiva do que codar as URLs.
+2. Você pode mudar suas URLs de uma vez ao invés de precisar se lembrar de mudar 
+   manualmente URLs codadas.
+3. Produzindo a URL lida com escapes de caracteres epeciais de forma transparente.
+4. Os caminhos gerados são sempre absolutos, evitando comportamentos inesperados
+   caminhos relativos no browser.
+5. Se sua aplicação está colocada fora da URL root, por exemplo, em
+   ``/myapplication`` ao invés de ``/``, :func:`~flask.url_for` lida com isso
+   apropriadamente por você.
 
-For example, here we use the :meth:`~flask.Flask.test_request_context` method
-to try out :func:`~flask.url_for`. :meth:`~flask.Flask.test_request_context`
-tells Flask to behave as though it's handling a request even while we use a
-Python shell. See :ref:`context-locals`.
+Por exemplo, aqui usamos o método :meth:`~flask.Flask.test_request_context` para
+experimentar :func:`~flask.url_for`. :meth:`~flask.Flask.test_request_context`
+diz ao Flask se comportar como se estivesse lidando com uma requisição, mesmo 
+quando usamos um Python shell. Veja :ref:`context-locals`.
 
 .. code-block:: python
 
@@ -287,7 +285,7 @@ Python shell. See :ref:`context-locals`.
     /user/John%20Doe
 
 
-HTTP Methods
+Métodos HTTP
 ````````````
 
 Web applications use different HTTP methods when accessing URLs. You should
