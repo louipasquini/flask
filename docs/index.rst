@@ -1,7 +1,7 @@
 .. rst-class:: hide-header
 
 Bem vindo ao Flask
-================
+==================
 
 .. image:: _static/flask-horizontal.png
     :align: center
@@ -27,7 +27,7 @@ Flask quando buscar informações.
 
 
 Guia de usuário
-------------
+---------------
 
 Flask fornece configurações e convenções, com padrões claros, para iniciar.
 Essa seção da documentação explica as diferentes partes do framework Flask e como
@@ -63,7 +63,7 @@ desenvolvidas pela comunidade para adicionar ainda mais funcionalidades.
 
 
 Referência da API
--------------
+-----------------
 
 Se estiver buscando informações sobre uma função, classe ou método específico,
 essa parte da documentação é para você.
