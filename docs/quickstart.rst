@@ -326,20 +326,21 @@ Se um ``GET`` está presente, Flask automaticamente adiciona suporte para o mét
 
 .. _HTTP RFC: https://www.ietf.org/rfc/rfc2068.txt
 
-Static Files
-------------
+Arquivos estáticos
+------------------
 
-Dynamic web applications also need static files.  That's usually where
-the CSS and JavaScript files are coming from.  Ideally your web server is
-configured to serve them for you, but during development Flask can do that
-as well.  Just create a folder called :file:`static` in your package or next to
-your module and it will be available at ``/static`` on the application.
+Aplicações web dinâmicas também precisam de arquivos estáticos.  São onde
+normalmente os arquivos CSS e JavaScript vêm. Idealmente seu servidor web
+está configurado para fornecê-los a você, mas durante o desenvolvimento Flask
+você pode fazê-lo também. Apenas crie uma pasta chamada :file:`static` no seu
+pacote ou próximo ao seu módulo e ela estará disponível em ``/static`` na
+aplicação.
 
-To generate URLs for static files, use the special ``'static'`` endpoint name::
+Para gerar URLs para arquivos estáticos, use o endpoint especial ``'static'``::
 
     url_for('static', filename='style.css')
 
-The file has to be stored on the filesystem as :file:`static/style.css`.
+O arquivo deve estar localizado no sistema como :file:`static/style.css`.
 
 Rendering Templates
 -------------------
