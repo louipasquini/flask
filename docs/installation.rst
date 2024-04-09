@@ -127,7 +127,7 @@ Seu shell prompt vai mudar para mostrar o nome do ambiente virtual ativado.
 
 
 Instale o Flask
--------------
+---------------
 
 Com o ambiente ativado, use o seguinte comando para instalar o Flask:
 
